@@ -9,4 +9,3 @@ export function getOneTransaction(id){
     return fetch(`${URL}/${id}`)
     .then((res)=> res.json())
 }
-

@@ -5,8 +5,10 @@ import "../styles/Header.css"
 const Header = () => {
   return (
     <div className='header-wrapper'>
-        <h1 className='budget-header'>Budget App</h1>
-        <Link to="/transactions/new">
+        <Link className="home-link" to="/">
+            <h1 className='budget-header'>Budget App</h1>
+        </Link>
+        <Link className="form-link" to="/transactions/new">
             <div className='new-transaction'>Add New Transaction</div>
         </Link>
     </div>

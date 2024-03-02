@@ -1,0 +1,14 @@
+.detail-wrapper{
+    border: 1px solid gray;
+    height: 60vh;
+    width: 80vw;
+    align-self: center;
+}
+
+.detail-header{
+    font-size: 30px;
+}
+
+.payment-type{
+    font-weight: bold;
+}
