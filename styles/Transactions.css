@@ -1,0 +1,17 @@
+.transactions-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: 1px solid red;
+    height: 90vh;
+}
+.transactions-list-header{
+    font-size: 50px;
+}
+.transactions *{
+    font-size: 20px;
+}
+.transactions{
+    list-style-type: none;
+}

@@ -5,10 +5,10 @@ import "../styles/Header.css"
 const Header = () => {
   return (
     <div className='header-wrapper'>
-        <h1>Budget App</h1>
-        {/* <Link to="/transactions/new"> */}
-        <div className='new-transaction'>Add New Transaction</div>
-        {/* </Link> */}
+        <h1 className='budget-header'>Budget App</h1>
+        <Link to="/transactions/new">
+            <div className='new-transaction'>Add New Transaction</div>
+        </Link>
     </div>
   )
 }

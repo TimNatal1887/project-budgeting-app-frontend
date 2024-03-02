@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import { Route, Routes } from 'react-router-dom'
 import Transactions from './Transactions.jsx'
+import TransactionNewForm from "./TransactionNewForm.jsx"
 
 const App = () => {
   
@@ -13,6 +14,10 @@ const App = () => {
       <Route 
       path='/'
       element={<Transactions />}
+      />
+      <Route 
+      path="/transactions/new"
+      element={< TransactionNewForm />}
       />
     </Routes>
    </div>
