@@ -4,6 +4,7 @@
     height: 60vh;
     width: 80vw;
     align-self: center;
+    background: white;
 }
 
 .detail-header{
@@ -43,7 +44,6 @@
 .details-right{
     display: flex;
     flex-direction: column;
-    /* border: 1px solid green; */
     height: 40vh;
     width: 50%;
     align-items: center;
@@ -66,4 +66,36 @@
 }
 .payment-amount-number{
     font-weight: bold;
+}
+
+.transaction-alter-buttons{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 20px;
+    font-size: 20px;
+    /* border: 1px solid green; */
+}
+
+ .alter-transaction{
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: box-shadow 0.3s ease; 
+  }
+  
+.alter-transaction:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+}
+.edit-link{
+    text-decoration: none;
+}
+.edit-transaction{
+    color: black;
+}
+.edit-transaction:hover{
+    color: blue;
+}
+
+.delete-transaction:hover{
+    color: red;
 }

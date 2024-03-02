@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,Link } from 'react-router-dom'
 import { getOneTransaction } from '../helpers/fetch'
 import "../styles/TransactionDetails.css"
 
@@ -26,6 +26,10 @@ const TransactionDetails = () => {
             <p className='payment-info'>Payment Category: {category}</p>
             <p className='payment-info'>Transaction type: {type}</p>
             <p className='transaction-name'>Transaction: {transaction_name}</p>
+            <div className='transaction-alter-buttons'>
+            <Link to={`/transactions/:id/edit`} className='edit-link'> <p className='edit-transaction alter-transaction'>Edit Transaction</p></Link>
+            <p className='delete-transaction alter-transaction'>Delete Transaction</p>
+            </div>
           </div>
           <div className='details-right'>
             <p className='transaction-id'>Transaction ID: <span className='transaction-id-number'> {transaction_id} </span></p>

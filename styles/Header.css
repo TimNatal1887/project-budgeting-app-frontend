@@ -8,13 +8,21 @@
 }
 
 .budget-header{
+    font-size: 44px;
     margin-left: 50px;
 }
 
-.new-transaction{
+.new-transaction {
     margin-right: 100px;
-    border: 2px solid gray;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    transition: box-shadow 0.3s ease; 
+  }
+  
+.new-transaction:hover {
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
 }
 
 .home-link{
@@ -23,7 +31,7 @@
 }
 
 .form-link{
-    color: rgb(58,58,60);
+    color: black;
     text-decoration: none;
     font-weight: bold;
 }
