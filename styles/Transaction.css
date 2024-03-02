@@ -1,0 +1,17 @@
+.transaction-list-item{
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    height: 40px;
+    width: 800px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.Deposit{
+    color: green;
+}
+
+.Withdrawal{
+    color: red;
+}
