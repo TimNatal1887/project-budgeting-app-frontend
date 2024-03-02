@@ -15,17 +15,22 @@ const TransactionDetails = () => {
   },[id])
 
   if(Object.keys(transaction).length < 1) return null
-  const {transaction_name, amount, date, type, from, category} = transaction
+  const { id:transaction_id, transaction_name, amount, date, type, from, category} = transaction
   return (
       <div className='detail-wrapper'>
-        <h4 className='detail-header'>Transaction details</h4>
+        <h4 className='detail-header'>Transaction Details</h4>
         <hr></hr>
         <div className='detail-body'>
           <div className='details-left'>
-            <p><span className='payment-type'>Payment {type === "Withdrawal" ? "sent ":"received "}</span> {type === "Withdrawal" ? "to ":"from "}{from}</p>
+            <p className='payment-type'><span className='payment-type-span'>Payment {type === "Withdrawal" ? "sent to":"received from"}</span>: {from}</p>
+            <p className='payment-info'>Payment Category: {category}</p>
+            <p className='payment-info'>Transaction type: {type}</p>
+            <p className='transaction-name'>Transaction: {transaction_name}</p>
           </div>
           <div className='details-right'>
-
+            <p className='transaction-id'>Transaction ID: <span className='transaction-id-number'> {transaction_id} </span></p>
+            <p className='payment-amount'>Payment Amount: <span className={`payment-amount-number ${type}`}>${amount} USD </span></p>
+            <p>Payment Date: <span className={`transaction-type ${type}`}> {type === "Withdrawal" ? "Sent":"Received"} </span> on {date}</p>
           </div>
         </div>
       </div>

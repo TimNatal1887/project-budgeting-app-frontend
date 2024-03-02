@@ -1,5 +1,6 @@
 .detail-wrapper{
-    border: 1px solid gray;
+    border: 3px solid gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     height: 60vh;
     width: 80vw;
     align-self: center;
@@ -7,8 +8,62 @@
 
 .detail-header{
     font-size: 30px;
+    padding: 15px 0px;
+    margin-left: 15px;
+}
+.detail-body{
+    display: flex;
+    justify-content: space-between;
 }
 
+.details-left{
+    font-size: 25px;
+    margin-top: 20px;
+}
+.details-left p{
+    margin-left: 20px;
+}
 .payment-type{
+    margin-bottom: 40px;
+}
+.payment-info{
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.payment-type-span{
+    font-weight: bold;
+}
+
+.transaction-name{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.details-right{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    height: 40vh;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px; 
+}
+.details-right p{
+    margin: 40px 0px;
+}
+.transaction-id{
+    font-weight: bold;
+    font-style: italic;
+}
+.transaction-id-number{
+    color: green;
+}
+.payment-amount{
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+.payment-amount-number{
     font-weight: bold;
 }
