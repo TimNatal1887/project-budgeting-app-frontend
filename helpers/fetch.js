@@ -31,3 +31,8 @@ export function updateTransaction(id, transaction) {
       return response.json();
     });
 }
+
+export function deleteTransaction(id){
+    const options = { method: "DELETE" };
+    return fetch(`${URL}/${id}`, options);
+}
