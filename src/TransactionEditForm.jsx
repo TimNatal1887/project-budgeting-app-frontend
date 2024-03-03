@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { updateTransaction, getOneTransaction } from '../helpers/fetch'
 import { useNavigate, useParams } from 'react-router-dom'
 
-const TransactionNewForm = () => {
+const TransactionEditForm = () => {
   const { id } = useParams()
   const [transaction, setTransaction] = useState({
     transaction_name:"",
@@ -48,18 +48,24 @@ const TransactionNewForm = () => {
         </label>
         <label htmlFor="amount">
           <p>Transaction Amount</p>
-          <input type="number"
-            id='amount'
-            name='amount'
+          <input
+            type="text"
+            id="amount"
+            name="amount"
+            pattern="(?!0+(\.0{1,2})?$)\d+(\.\d{1,2})?"
+            title="Enter any amount above 0 with up to two decimal places"
             onChange={handleChange}
           />
         </label>
         <label htmlFor="date">
           <p>Date of Transaction</p>
-          <input type="text"
+          <input
+            type="text"
             id='date'
             name='date'
             onChange={handleChange}
+            pattern="(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(\d{2})"
+            title="Please enter in mm-dd-yy format"
           />
         </label>
         <label htmlFor="from">
@@ -68,6 +74,7 @@ const TransactionNewForm = () => {
             id='from'
             name='from'
             onChange={handleChange}
+            required
           />
         </label>
         <label htmlFor="category">
@@ -76,11 +83,12 @@ const TransactionNewForm = () => {
             id='category'
             name='category'
             onChange={handleChange}
+            required
           />
         </label>
         <label htmlFor="type">
           <p>Transaction Type</p>
-          <select id="type" name="transactiontype" onChange={handleChange}>
+          <select id="type" name="type" onChange={handleChange}>
             <option value="Withdrawal">Withdrawal</option>
             <option value="Deposit">Deposit</option>
           </select>
@@ -93,4 +101,4 @@ const TransactionNewForm = () => {
   )
 }
 
-export default TransactionNewForm
+export default TransactionEditForm
