@@ -13,3 +13,15 @@
 .total-amount{
     text-align: center;
 }
+
+.rich{
+    color: green;
+}
+
+.low{
+    color: yellow;
+}
+
+.broke{
+    color: red;
+}

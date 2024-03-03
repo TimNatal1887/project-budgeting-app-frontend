@@ -27,7 +27,7 @@ const TransactionDetails = () => {
             <p className='payment-info'>Transaction type: {type}</p>
             <p className='transaction-name'>Transaction: {transaction_name}</p>
             <div className='transaction-alter-buttons'>
-            <Link to={`/transactions/:id/edit`} className='edit-link'> <p className='edit-transaction alter-transaction'>Edit Transaction</p></Link>
+            <Link to={`/transactions/${transaction_id}/edit`} className='edit-link'> <p className='edit-transaction alter-transaction'>Edit Transaction</p></Link>
             <p className='delete-transaction alter-transaction'>Delete Transaction</p>
             </div>
           </div>
