@@ -9,9 +9,9 @@ const Transaction = ({transaction}) => {
     const formattedMonthDayDate = formatMonthDayDate(date)
   return (
     <li className='transaction-list-item'>
-        <p>{formattedMonthDayDate}</p>
+        <p className='transaction-date-show'>{formattedMonthDayDate}</p>
         <Link to={`/transactions/${transaction.id}`}>
-            <p>{transaction_name}</p>
+            <p className='transaction-name-show'>{transaction_name}</p>
         </Link>
         <p className={`amount ${type}`}><span>{type === "Deposit" ? "+":"-"}</span>{amount}</p>
 

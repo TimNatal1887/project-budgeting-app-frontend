@@ -19,5 +19,5 @@ export function getBankTotal(transactions){
         return accumulatedTotal
     },0)
 
-    return total
+    return total.toFixed(2)
 }

@@ -44,6 +44,8 @@ const TransactionNewForm = () => {
             id='transaction_name'
             name='transaction_name'
             onChange={handleChange}
+            value={transaction.transaction_name}
+            required
           />
         </label>
         <label htmlFor="amount">
@@ -55,6 +57,7 @@ const TransactionNewForm = () => {
             pattern="(?!0+(\.0{1,2})?$)\d+(\.\d{1,2})?"
             title="Enter any amount above 0 with up to two decimal places"
             onChange={handleChange}
+            value={transaction.amount}
           />
         </label>
         <label htmlFor="date">
@@ -66,6 +69,7 @@ const TransactionNewForm = () => {
             onChange={handleChange}
             pattern="(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])-(\d{2})"
             title="Please enter in mm-dd-yy format"
+            value={transaction.date}
           />
         </label>
         <label htmlFor="from">
@@ -75,6 +79,7 @@ const TransactionNewForm = () => {
             name='from'
             onChange={handleChange}
             required
+            value={transaction.from}
           />
         </label>
         <label htmlFor="category">
@@ -84,11 +89,12 @@ const TransactionNewForm = () => {
             name='category'
             onChange={handleChange}
             required
+            value={transaction.category}
           />
         </label>
         <label htmlFor="type">
           <p>Transaction Type</p>
-          <select id="type" name="type" onChange={handleChange}>
+          <select id="type" name="type" onChange={handleChange} value={transaction.type}>
             <option value="Withdrawal">Withdrawal</option>
             <option value="Deposit">Deposit</option>
           </select>

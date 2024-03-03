@@ -7,7 +7,16 @@
     margin-bottom: 20px;
     align-items: center;
 }
-
+.transaction-date-show{
+    width: 100px;
+}
+.transaction-name-show{
+    width: 500px;
+    text-align: center;
+}
+.amount{
+    width: 120px;
+}
 .Deposit{
     color: green;
 }
