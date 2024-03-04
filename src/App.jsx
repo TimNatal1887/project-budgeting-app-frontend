@@ -7,8 +7,6 @@ import TransactionNewForm from "./TransactionNewForm.jsx"
 import TransactionEditForm from './TransactionEditForm.jsx'
 
 const App = () => {
-  
-
   return(
     <div className='page-container'>
     <Header></Header>  

@@ -8,21 +8,23 @@ const TransactionDetails = () => {
   const [transaction, setTransaction] = useState({})
   const { id } = useParams()
   const navigate = useNavigate()
-
+  const { id:transaction_id, transaction_name, amount, date, type, from, category} = transaction
+  
   function handleDelete(){
     deleteTransaction(id)
     .then((res)=> navigate("/"))
   }
+  
   useEffect(()=>{
     getOneTransaction(id)
     .then((res)=> {
       setTransaction(res.transaction)
     })
   },[id])
-
-
+  
   if(Object.keys(transaction).length < 1) return null
-  const { id:transaction_id, transaction_name, amount, date, type, from, category} = transaction
+
+
   return (
       <div className='detail-wrapper'>
         <h4 className='detail-header'>Transaction Details</h4>

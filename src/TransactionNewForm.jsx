@@ -13,8 +13,8 @@ const TransactionNewForm = () => {
     type:"Withdrawal"
   })
   const [toggleError, setToggleError] = useState(false)
-
   const navigate = useNavigate()
+
 
   function handleChange(e){
     setTransaction({
@@ -31,10 +31,11 @@ const TransactionNewForm = () => {
     createTransaction(transaction)
     .then((res)=>{
       const newTransactionId = res.transactions[res.transactions.length - 1].id
+
       navigate(`/transactions/${newTransactionId}`)
-      setToggleError(false)
     })
   }
+  
   return (
     <div className='form-page-wrapper'>
       <h2 className='form-header'>Add a New Transaction</h2>

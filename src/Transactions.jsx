@@ -8,6 +8,7 @@ import { getBankTotal } from '../helpers/helpers.js'
 const Transactions = () => {
     const [transactions, setTransactions] = useState([])
     const [bankTotal, setBankTotal] = useState(0)
+    
     useEffect(()=>{
         getAllTransactions()
         .then((data)=> setTransactions(data.transactions))

@@ -23,11 +23,10 @@ const TransactionEditForm = () => {
 
   function handleSubmit(e){
     e.preventDefault();
+
     transaction.amount = Number(transaction.amount).toFixed(2)
     updateTransaction(id,transaction)
-    .then((res)=>{
-      navigate(`/transactions/${id}`)
-    })
+    .then((res)=> navigate(`/transactions/${id}`))
   }
 
   useEffect(()=>{
