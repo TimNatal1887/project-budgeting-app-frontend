@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createTransaction } from '../helpers/fetch'
 import { useNavigate } from 'react-router-dom'
+import "../styles/TransactionForm.css"
 
 const TransactionNewForm = () => {
   const [transaction, setTransaction] = useState({
@@ -36,7 +37,7 @@ const TransactionNewForm = () => {
   }
   return (
     <div className='form-page-wrapper'>
-      <h2>Add a New Transaction</h2>
+      <h2 className='form-header'>Add a New Transaction</h2>
       <form className='form-wrapper' onSubmit={handleSubmit}>
         <label htmlFor="transaction_name">
           <p>Transaction Title</p>
@@ -100,7 +101,7 @@ const TransactionNewForm = () => {
           </select>
         </label>
         <div>
-          <button>Submit</button>
+          <button>Add Transaction</button>
         </div>
       </form>
       </div>

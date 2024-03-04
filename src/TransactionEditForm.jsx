@@ -103,7 +103,7 @@ const TransactionEditForm = () => {
           </select>
         </label>
         <div>
-          <button>Submit</button>
+          <button>Update Transaction</button>
         </div>
       </form>
       </div>

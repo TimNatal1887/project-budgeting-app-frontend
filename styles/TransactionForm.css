@@ -1,0 +1,42 @@
+.form-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 80vh;
+    width: 50vw;
+    align-self: center;
+    font-size: 20px;
+}
+
+.form-header{
+   margin-bottom: 30px; 
+}
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 3px solid black;
+    width: 70%;
+}
+.form-wrapper label{
+    margin-top: 10px;
+}
+.form-wrapper input{
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.form-wrapper select{
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+}
+
+.form-wrapper button{
+    font-weight: bold;
+    margin: 20px 0px;
+    height: 30px;
+    width: 120px;
+}
